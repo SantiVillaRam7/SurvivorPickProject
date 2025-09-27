@@ -13,6 +13,11 @@ This repo scrapes the NFL schedule/results, aggregates moneyline odds, pulls wee
 
 #### Option A: Built-in venv (recommended)
 ```bash
-# from repo root
-bash scripts/setup.sh
-source .venv/bin/activate
+# Create the conda environment
+conda env create -f environment.yml
+
+# Activate the environment
+conda activate nfl-survivor-2025
+
+# Register the environment as a Jupyter kernel
+python -m ipykernel install --user --name=nfl-survivor-2025 --display-name "Python (nfl-survivor-2025)"
